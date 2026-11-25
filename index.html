@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Active Review — δοκιμαστικό demo</title>
+<style>
+  :root { --red: #E13028; --ink: #1d2327; --muted: #50575e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #f6f7f7; }
+  main { max-width: 560px; margin: 0 auto; padding: 40px 20px 60px; }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 8px; }
+  p.lead { color: var(--muted); margin: 0 0 28px; }
+  a.btn { display: block; text-align: center; background: var(--red); color: #fff; text-decoration: none; font-weight: 600; padding: 14px 18px; border-radius: 10px; font-size: 1.05rem; }
+  a.btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .note { font-size: .9rem; color: var(--muted); margin-top: 10px; text-align: center; }
+  ol { padding-left: 1.2em; margin: 32px 0 0; }
+  li { margin-bottom: 10px; }
+  code { background: #fff; border: 1px solid #dcdcde; border-radius: 4px; padding: 1px 6px; }
+  .box { background: #fff; border: 1px solid #dcdcde; border-radius: 10px; padding: 16px 18px; margin-top: 28px; font-size: .95rem; }
+  footer { margin-top: 40px; font-size: .85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Active Review — δοκιμαστικό demo</h1>
+  <p class="lead">Σύστημα κριτικών μετά από επίσκεψη τεχνικού: ο πελάτης σκανάρει ένα QR, βάζει αστέρια, και η επιχείρηση βλέπει στατιστικά ανά τεχνικό.</p>
+
+  <a class="btn" id="open" href="#">Άνοιγμα demo</a>
+  <p class="note">Ανοίγει ένα πλήρες WordPress μέσα στον browser σας. Η φόρτωση παίρνει 10–30 δευτερόλεπτα.</p>
+
+  <ol>
+    <li>Πατήστε ένα αστέρι. Με <strong>5 αστέρια</strong> εμφανίζεται κουμπί για κριτική στο Google· με <strong>1–4</strong> μια φόρμα για να πείτε τι πήγε στραβά.</li>
+    <li>Για να δείτε τι βλέπει η επιχείρηση, πατήστε τον σύνδεσμο <em>admin</em> στη μαύρη ταμπέλα κάτω και συνδεθείτε με χρήστη <code>admin</code> και κωδικό <code>password</code>.</li>
+    <li>Στο μενού <em>Κριτικές Active</em> θα βρείτε στατιστικά, αρνητικά σχόλια, τεχνικούς και QR codes.</li>
+  </ol>
+
+  <div class="box">
+    <strong>Τι να ξέρετε:</strong> είναι δοκιμαστικό. Κάθε επισκέπτης έχει δικό του αντίγραφο, τίποτα δεν αποστέλλεται (email, Telegram), και όλα σβήνονται όταν κλείσετε την καρτέλα. Το κουμπί Google οδηγεί σε δοκιμαστικό προφίλ που δεν υπάρχει.
+  </div>
+
+  <footer>Workelion — workelion.com</footer>
+</main>
+<script>
+  // Το blueprint φορτώνεται από το ίδιο site, ώστε ένας σύνδεσμος να αρκεί.
+  var bp = new URL('blueprint.json', location.href).href;
+  document.getElementById('open').href =
+    'https://playground.wordpress.net/?blueprint-url=' + encodeURIComponent(bp);
+</script>
+</body>
+</html>
